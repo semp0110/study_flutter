@@ -1,3 +1,4 @@
+/*https://www.youtube.com/watch?v=8gDhEdFhfys&list=PLQt_pzi-LLfpcRFhWMywTePfZ2aPapvyl&index=16*/
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -53,7 +54,24 @@ class MyPage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            // UserAccountsDrawerHeader(accountName: accountName, accountEmail: accountEmail)
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('assets/img.png'),
+                backgroundColor: Colors.white,
+              ),
+              accountName: Text('BBANTO'),
+              accountEmail: Text('semp0110@naver.com'),
+              onDetailsPressed:(){
+                print('arrow is clickd');
+              },
+              decoration: BoxDecoration(
+                color: Colors.red[200],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40.0),
+                  bottomRight: Radius.circular(40.0)
+                )
+              ),
+            )
           ],
         ),
       ),
